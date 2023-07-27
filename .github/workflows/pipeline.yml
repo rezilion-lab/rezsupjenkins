@@ -1,8 +1,7 @@
 name: test
 on: [push]
 jobs:
-
-test_redis:
+  test_redis:
     runs-on: ubuntu-latest
     container:
       image: redis:7.0.4
@@ -13,8 +12,6 @@ test_redis:
     steps:
       - uses: actions/checkout@v3
       - uses: Rezilion/github-action@v2.13.3
-
-
         with:
           image_name: 'redis:7.0.4'
           mode: 'start'
@@ -23,7 +20,7 @@ test_redis:
             timeout 10 redis-server || true
 
   rezilion:
-    needs: [test_runtimes, test_redis]
+    needs: [test_redis]
     runs-on: ubuntu-latest
     container:
       image: rezilion/validate-ci:b22238db
