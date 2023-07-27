@@ -29,9 +29,9 @@
                 <type>pom</type>
             </dependency>
             <dependency>
-                <groupID>commons-io</groupID>
-                <artifactID>commons-io</artifactID>
-                <version>2.5</version>
+                <groupID>org.jsoup</groupID>
+                <artifactID>jsoup</artifactID>
+                <version>1.12.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
